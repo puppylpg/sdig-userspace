@@ -5,7 +5,7 @@ class socket_server:
 
     def __init__(self, server_port, callback):
         self._server_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self._server_sock.bind(('', server_port))
+        self._server_sock.bind(('192.168.90.130', server_port))
         self._server_sock.listen(1)
         self._running = True
         self._callback = callback
